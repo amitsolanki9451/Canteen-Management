@@ -1,7 +1,7 @@
 USE [MCarbonLab]
 GO
 
-/********* Object:  StoredProcedure [dbo].[rpt_GetRecoveryWtByRecoveryWtDatenShift]    Script Date: 8/5/2019 12:55:59 PM ******/
+/********* Object: test  StoredProcedure [dbo].[rpt_GetRecoveryWtByRecoveryWtDatenShift]    Script Date: 8/5/2019 12:55:59 PM ******/
 SET ANSI_NULLS ON
 GO
 
@@ -13,7 +13,8 @@ GO
 	( 
 		@FromDate  DateTime= null,
 		@ToDate  DateTime=null,
-		@Shift varchar(100)=null
+		@Shift varchar(100)=null,
+
 	) 
 	AS 
 	BEGIN 
