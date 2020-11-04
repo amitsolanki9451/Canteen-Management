@@ -214,8 +214,8 @@
                                     <a __designer:mapid="e" class="Addcss" href="~/TechTeam/frmCanteenType.aspx" runat="server">
                                         <span class="auto-style34" style="margin-left: 175px;">&#43; Add </span></a>
 
-                                    <a __designer:mapid="e" class="Viewcss" href="~/TechTeam/frmCanteenTypeEdit.aspx" runat="server">
-                                        <span class="auto-style34" style="margin-left: 20px;">&#10070; View </span></a>
+                                  <%--  <a __designer:mapid="e" class="Viewcss" href="~/TechTeam/frmCanteenTypeEdit.aspx" runat="server">
+                                        <span class="auto-style34" style="margin-left: 20px;">&#10070; View </span></a>--%>
 
 
 
@@ -225,8 +225,8 @@
                                     <a __designer:mapid="e" class="Addcss" href="~/TechTeam/frmCanteenType.aspx" runat="server">
                                         <span class="auto-style34" style="margin-left: 175px;">&#43; Add </span></a>
 
-                                    <a __designer:mapid="e" class="Viewcss" href="~/TechTeam/frmCanteenTypeEdit.aspx" runat="server">
-                                        <span class="auto-style34" style="margin-left: 20px;">&#10070; View </span></a>
+                                   <%-- <a __designer:mapid="e" class="Viewcss" href="~/TechTeam/frmCanteenTypeEdit.aspx" runat="server">
+                                        <span class="auto-style34" style="margin-left: 20px;">&#10070; View </span></a>--%>
 
 
 
@@ -236,8 +236,8 @@
                                     <a __designer:mapid="e" class="Addcss" href="~/TechTeam/frmCanteenType.aspx" runat="server">
                                         <span class="auto-style34" style="margin-left: 175px;">&#43; Add </span></a>
 
-                                    <a __designer:mapid="e" class="Viewcss" href="~/TechTeam/frmCanteenTypeEdit.aspx" runat="server">
-                                        <span class="auto-style34" style="margin-left: 20px;">&#10070; View </span></a>
+                                   <%-- <a __designer:mapid="e" class="Viewcss" href="~/TechTeam/frmCanteenTypeEdit.aspx" runat="server">
+                                        <span class="auto-style34" style="margin-left: 20px;">&#10070; View </span></a>--%>
 
 
 
@@ -247,8 +247,8 @@
                                     <a __designer:mapid="e" class="Addcss" href="~/TechTeam/frmCanteenType.aspx" runat="server">
                                         <span class="auto-style34" style="margin-left: 155px;">&#43; Add </span></a>
 
-                                    <a __designer:mapid="e" class="Viewcss" href="~/TechTeam/frmCanteenTypeEdit.aspx" runat="server">
-                                        <span class="auto-style34" style="margin-left: 20px;">&#10070; View </span></a>
+                                    <%--<a __designer:mapid="e" class="Viewcss" href="~/TechTeam/frmCanteenTypeEdit.aspx" runat="server">
+                                        <span class="auto-style34" style="margin-left: 20px;">&#10070; View </span></a>--%>
                                 </p>
                                
                
