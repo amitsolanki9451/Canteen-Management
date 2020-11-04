@@ -1,7 +1,7 @@
 USE [MCarbonLab]
 GO
 
-/******** Object:  StoredProcedure [dbo].[rpt_GetRecoveryWtByRecoveryWtDatenShift]    Script Date: 8/5/2019 12:55:59 PM ******/
+/********* Object:  StoredProcedure [dbo].[rpt_GetRecoveryWtByRecoveryWtDatenShift]    Script Date: 8/5/2019 12:55:59 PM ******/
 SET ANSI_NULLS ON
 GO
 
