@@ -1,0 +1,99 @@
+﻿ .myMenu ul {
+    margin: 0;
+    padding:0;
+    text-align:left;
+    list-style-type:none;
+    vertical-align:middle;
+  }
+  .myMenu a {
+    display:block;  
+    color:#fff; 
+    background-color:darkblue;
+    text-decoration: none;
+    padding: .8em 1.8em;
+    text-transform:none;
+    font-size: 10pt;
+    letter-spacing: 1px;
+    text-shadow: 0 -1px 0 #0026ff;
+    position:relative;
+    font-family:Arial;
+  }
+  .myMenu{  
+    vertical-align:middle; 
+    display: inline-block;
+    border-radius:6px;
+    font-family:Arial;
+  }
+  .myMenu li{position: relative;list-style-type:none;}
+  .myMenu > li { 
+    float:left; 
+    border-bottom: 4px thin solid; 
+    margin-right: 1px; 
+  } 
+  .myMenu > li > a { 
+    margin-bottom:1px;
+    font-size: 10pt;
+  }
+  .myMenu > li:hover , .myMenu > li:hover >a{  border-bottom-color:black;}
+  .myMenu li:hover > a { color:orange; }
+  .myMenu > li:first-child  { border-radius: 4px 0 0 4px;} 
+  .myMenu > li:first-child>a{border-radius: 4px 0 0 0;}
+  .myMenu > li:last-child  { 
+    border-radius: 0 0 4px 0; 
+    margin-right: 0;
+  } 
+  .myMenu > li:last-child >a{border-radius: 0 4px 0 0; }
+  .myMenu li li a { margin-top:1px}
+  
+  
+  
+    .myMenu li a:first-child:nth-last-child(2):before { 
+     content:""; 
+     position: absolute; 
+     height:0; 
+     width: 0; 
+     border: 5px solid transparent; 
+     top: 50% ;
+     right:5px;  
+   }
+   
+   /*Submenu Area*/
+.myMenu ul {
+  position: absolute;
+  white-space: nowrap;
+  border-bottom: 5px solid  white;
+  z-index: 1;
+  left: -99999em;
+  text-transform:none;
+}
+.myMenu > li:hover > ul {
+  left: auto;
+  padding-top: 5px  ;
+  min-width: 100%;
+}
+.myMenu > li li ul {  border-left:1px solid #fff;}
+
+
+.myMenu > li li:hover > ul { 
+ 
+  left: 100%;
+  top: -1px;
+}
+/* arrow hover styling */
+.myMenu > li > a:first-child:nth-last-child(2):before { 
+  border-top-color: #aaa; 
+}
+.myMenu > li:hover > a:first-child:nth-last-child(2):before {
+  border: 5px solid transparent; 
+  border-bottom-color: orange; 
+  margin-top:-5px
+}
+.myMenu li li > a:first-child:nth-last-child(2):before {  
+  border-left-color: #aaa; 
+  margin-top: -5px
+}
+.myMenu li li:hover > a:first-child:nth-last-child(2):before {
+  border: 5px solid transparent; 
+  border-right-color: orange;
+  right: 10px; 
+}

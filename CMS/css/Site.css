@@ -1,0 +1,66 @@
+﻿.progressmodal {
+    position: fixed;
+    z-index: 999;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    background-color: lavender;
+    filter: alpha(opacity=60);
+    opacity: 0.6;
+    -moz-opacity: 0.8;
+}
+.center {
+    z-index: 1000;
+    margin: 300px auto;
+    width: 130px;
+    padding: 10px;
+    border-radius: 10px;
+    filter: alpha(opacity=100);
+    opacity: 1;
+    -moz-opacity: 1;
+}
+    .center img {
+        height: 128px;
+        width: 128px;
+    }
+/*--------------------*/
+
+        .completionList {
+        border:solid 1px Gray;
+        margin:0px;
+        padding:3px;
+        height: 120px;
+        overflow:auto;
+        background-color: #FFFFFF;     
+         z-index: 2147483647 !important;
+        
+        } 
+        .listItem {
+        color: #191919;
+        } 
+        .itemHighlighted {
+        background-color: #ADD6FF;       
+        }
+
+        
+        .footer {
+            vertical-align: bottom;
+            background-color: #0061ab;
+            color:white;
+            position: relative;
+            bottom: 0px;
+            width: 100%;
+            padding-bottom: 0px;
+            margin: 0px;
+        }
+        tr th,tr td {
+            text-align:center;
+        }
+    .EmptyData td 
+         {
+             border-width: 0px !important;
+             color:red;
+             text-align:left;
+             font-size:small;
+             width:100%;
+         }

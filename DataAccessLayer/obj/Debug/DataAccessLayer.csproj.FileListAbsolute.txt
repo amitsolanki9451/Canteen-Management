@@ -1,0 +1,5 @@
+D:\Amit PC Backup\DT Project\CMS\Project\CMS\DataAccessLayer\bin\Debug\DataAccessLayer.dll
+D:\Amit PC Backup\DT Project\CMS\Project\CMS\DataAccessLayer\bin\Debug\DataAccessLayer.pdb
+D:\Amit PC Backup\DT Project\CMS\Project\CMS\DataAccessLayer\obj\Debug\DataAccessLayer.csprojResolveAssemblyReference.cache
+D:\Amit PC Backup\DT Project\CMS\Project\CMS\DataAccessLayer\obj\Debug\DataAccessLayer.dll
+D:\Amit PC Backup\DT Project\CMS\Project\CMS\DataAccessLayer\obj\Debug\DataAccessLayer.pdb

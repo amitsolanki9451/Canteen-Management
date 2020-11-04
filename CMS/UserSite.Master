@@ -1,0 +1,163 @@
+<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="UserSite.master.cs" Inherits="HindalcoCarbon.UserSite" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+     <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+    <title>PG - User Control Panel</title>
+     <link rel="shortcut icon" href="favicon.ico" />  
+
+    <link href="stylesheet/styleadmin.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="stylesheet/template_css.css" type="text/css" />
+   
+    
+    
+ <asp:ContentPlaceHolder ID="Contenthead" runat="server">
+                                </asp:ContentPlaceHolder>
+</head>
+<body id="main">
+    <form id="form1" runat="server">
+    <asp:ScriptManager ID="ScriptManager1" runat="server">
+    </asp:ScriptManager>
+    <div>
+        <table style="width:100%" class="menubar" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+            <td height="120" colspan="2">
+                <table style="width:100%;padding:1px;border:none" cellpadding="0" cellspacing="0">
+                    <tr>
+                        <td class="normalbrown" align="right" height="10px">
+                            &nbsp;
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="normalbrown" align="right" height="50">
+                            <img src="images/PnGlogo.png" width="159" height="30" border="0" />&nbsp;&nbsp;&nbsp;
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="right">
+                            &nbsp;
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="right" style="background-color: #525252" height="25">
+                            <div class="pathway">
+                                <strong>Welcome !</strong> <?=$_SESSION['UserFullName']?> [ <span style="color: White">User</span>
+                                ]</div>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td class="normalbrown" width="171" height="25px;">
+            </td>
+            <td class="menudottedline" align="right">
+                <a href="frmUserDashBoard.aspx"><strong>Home </strong></a>| <a href="#/"
+                    target="_blank"><strong>Go to Mahan.com</strong></a> |<strong><asp:LinkButton
+                        ID="lnkbtnLogout" runat="server" OnClick="lnkbtnLogout_Click" CausesValidation="False">Logout</asp:LinkButton></strong>&nbsp;&nbsp;&nbsp;&nbsp;
+            </td>
+        </tr>
+    </table>        
+    </div>
+    
+    
+&nbsp;
+
+
+    <table style="width:100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+            <td width="170px" valign="top">
+                <div style="margin-top: 2px;">
+                    <asp:ContentPlaceHolder ID="ContentLeftMenuHolder" runat="server">                      
+                        <a href="frmDashBoard.aspx" class="noramlLink">Manage Home</a>                                              
+                      
+                         </asp:ContentPlaceHolder>
+                </div>
+            </td>
+            <td class="RightCont" valign="top">
+                <div class="rightdiv" style="margin-top: -10px;">
+                    <div class="displaybox">
+                        <div class="display_boxtitle">
+                            <div class="rightcorner">
+                                &nbsp;</div>
+                            <div class="leftcorner" style="width: 100%">
+                                <asp:ContentPlaceHolder ID="ContentPlaceTitleleftcorner" runat="server">
+                                </asp:ContentPlaceHolder>
+                            </div>
+                        </div>
+                        <br />
+                        <br />
+                        <table border="0" cellpadding="5" cellspacing="0" class="grid-table">
+                            <tr class="tdheader">
+                                <td class="gname">
+                                    <%-- Middle Contents Start --%>
+                                    <asp:ContentPlaceHolder ID="ContentHolderSearch" runat="server">
+                                    </asp:ContentPlaceHolder>
+                                    <%-- Middle Contents End --%>
+                                </td>
+                            </tr>
+                             <tr class="tdheader">
+                                <td class="gname">
+                                    <%-- Middle Contents Start --%>
+                                    <asp:ContentPlaceHolder ID="ContentHolderGrid" runat="server">
+                                    </asp:ContentPlaceHolder>
+                                    <%-- Middle Contents End --%>
+                                </td>
+                            </tr>
+                              <tr class="tdheader">
+                                <td class="gname">
+                                    <%-- Middle Contents Start --%>
+                                    <asp:ContentPlaceHolder ID="ContentHolderMain" runat="server">
+                                      
+                                        
+                                      
+                                    </asp:ContentPlaceHolder>
+                                    <%-- Middle Contents End --%>
+                                </td>
+                            </tr>
+                              <tr class="tdheader">
+                                <td class="gname">
+                                    <%-- Middle Contents Start --%>
+                                    <asp:ContentPlaceHolder ID="ContentPlaceHolderMerge" runat="server">
+                                      
+                                        
+                                      
+                                    </asp:ContentPlaceHolder>
+                                    <%-- Middle Contents End --%>
+                                </td>
+                            </tr>
+                            <tr class="tdheader">
+                                <td class="gname">
+                                    <%-- Middle Contents Start --%>
+                                    <asp:ContentPlaceHolder ID="ContentPlaceHolderSplit" runat="server">
+                                      
+                                        
+                                      
+                                    </asp:ContentPlaceHolder>
+                                    <%-- Middle Contents End --%>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </td>
+        </tr>
+    </table>
+    <div class="footerMain">
+        <table width="99%" border="0">
+            <tr>
+                <td valign="top">
+                </td>
+                <td style="font-family: tahoma; font-size: 11px;" valign="top" align="right" height="27">
+                    <br>
+                   &nbsp; Powered by - <a href="http://Mahan.com/">DomisTech Pvt. Ltd. Team </a> &gt; &lt; 2017-18 &gt;, Channel Partner :DomisTech Pvt.Ltd.&nbsp;
+                </td>
+            </tr>
+        </table>
+    </div>
+    </form>
+</body>
+</html>

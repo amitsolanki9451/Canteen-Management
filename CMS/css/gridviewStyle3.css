@@ -1,0 +1,128 @@
+﻿.Grid
+{
+	width: 100%;
+	/*border: solid 1px black;*/
+	min-width: 100%;
+
+    background-color: #fff; 
+    margin: 5px 0 10px 0; 
+    border: solid 1px #525252; 
+    border-collapse:collapse; 
+    font-family:Calibri; 
+    color: #474747;
+}
+.Gridheader
+{
+	background-color: #fadd7a;
+	font-family: Arial;
+	color: White;
+	height: 40px;
+	text-align: center;
+	font-size: 16px;
+}
+
+.Gridrows
+{
+	background-color: #fff;
+	font-family: Arial;
+	font-size: 14px;
+	color: #000;
+	min-height: 25px;
+	text-align: left;
+	border: none 0px transparent;
+}
+.Gridalt
+{
+	background-color: #fff;
+	font-family: Arial;
+	font-size: 14px;
+	color: #000;
+	min-height: 25px;
+	text-align: left;
+	border: none 0px transparent;
+}
+.Gridrows:hover
+{
+	background-color: #fadd7a;
+	color: #000;
+}
+
+.Grid a /** FOR THE PAGING ICONS  **/
+{
+	background-color: Transparent;
+	padding: 5px 5px 5px 5px;
+	color: #fff;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+.Grid a:hover /** FOR THE PAGING ICONS  HOVER STYLES**/
+{
+	background-color: #fff;
+	color: #000;
+}
+.Grid span /** FOR THE PAGING ICONS CURRENT PAGE INDICATOR **/
+{
+	
+	color: #000;
+	padding: 5px 5px 5px 5px;
+}
+.GridPager
+{
+	background-color: #fadd7a;
+	font-family: Arial;
+	color: White;
+	height: 30px;
+	text-align: left;
+}
+.GridPager a, .GridPager span
+    {
+        display: block;
+        /*height: 15px;
+        width: 15px;*/
+        font-weight: bold;
+        text-align: center;
+        text-decoration: none;
+    }
+    .GridPager a
+    {
+        background-color: #f5f5f5;
+        color: #969696;
+        border: 1px solid #969696;
+    }
+    .GridPager span
+    {
+        background-color: #A1DCF2;
+        color: #000;
+        border: 1px solid #3AC0F2;
+    }
+    .GridPager a:hover{
+    background-color:#1e8d12;
+    color:#fff;
+}
+.Grid td
+{
+	border: 1px solid #A1DCF2;
+        font-family: Arial;
+        font-size: 10pt;
+        text-align: center;
+      padding: 2px;       
+      text-align: center;
+}
+.Grid th
+{
+	padding : 4px 2px; 
+      color: #fff; 
+      font-size: 14px;
+        font-weight: normal;     
+      border-left: solid 1px #525252; 
+       text-align: center;
+}
+ .rounded_corners
+    {
+        border: 1px solid #A1DCF2;
+        -webkit-border-radius: 8px;
+        -moz-border-radius: 8px;
+        border-radius: 8px;
+        overflow: hidden;
+    }

@@ -1,0 +1,2135 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{4761CB4A-6FB8-4FAD-861C-FD41D5C0875B}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CMS</RootNamespace>
+    <AssemblyName>CMS</AssemblyName>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <TargetFrameworkProfile />
+    <Use64BitIISExpress />
+    <UseGlobalApplicationHostFile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxControlToolkit">
+      <HintPath>..\packages\AjaxControlToolkit.18.1.1\lib\net40\AjaxControlToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.ReportViewer.Common, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.ReportViewer.11.0.3366.16\lib\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.ReportViewer.11.0.3366.16\lib\Microsoft.ReportViewer.DataVisualization.DLL</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.ReportViewer.11.0.3366.16\lib\Microsoft.ReportViewer.Design.DLL</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.ReportViewer.11.0.3366.16\lib\Microsoft.ReportViewer.ProcessingObjectModel.DLL</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WebDesign, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.ReportViewer.11.0.3366.16\lib\Microsoft.ReportViewer.WebDesign.DLL</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WebForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.ReportViewer.11.0.3366.16\lib\Microsoft.ReportViewer.WebForms.DLL</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.ReportViewer.11.0.3366.16\lib\Microsoft.ReportViewer.WinForms.DLL</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.SqlServer.Types.11.0.1\lib\net20\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="obout_Calendar2_Net">
+      <HintPath>obt\obout_Calendar2_Net.dll</HintPath>
+    </Reference>
+    <Reference Include="Shield.Web.UI, Version=1.7.38.0, Culture=neutral, PublicKeyToken=d849307612f07c09, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>shieldui\NET45\Shield.Web.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web.DataVisualization" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="css\bootstrap-4.0.0\css\bootstrap.min.css" />
+    <Content Include="css\bootstrap-4.0.0\css\card.css" />
+    <Content Include="css\bootstrap-4.0.0\css\font-awesome.css" />
+    <Content Include="css\bootstrap-4.0.0\css\font-awesome.min.css" />
+    <Content Include="css\bootstrap-4.0.0\css\png-services.css" />
+    <Content Include="css\bootstrap-4.0.0\css\REQ.css" />
+    <Content Include="css\bootstrap-4.0.0\css\Serviceicon.css" />
+    <Content Include="css\bootstrap-4.0.0\css\style.css" />
+    <Content Include="css\bootstrap-4.0.0\css\style.min.css" />
+    <Content Include="css\bootstrap-4.0.0\js\bootstrap.min.js" />
+    <Content Include="css\bootstrap-4.0.0\js\jquery.min.js" />
+    <Content Include="css\bootstrap-4.0.0\js\lib\carbonad.js" />
+    <Content Include="css\bootstrap-4.0.0\js\lib\githubicons.js" />
+    <Content Include="css\bootstrap-4.0.0\js\src\tabs.js" />
+    <Content Include="css\all.css" />
+    <Content Include="css\all.min.css" />
+    <Content Include="css\animate.min.css" />
+    <Content Include="css\bootstrap.min.css" />
+    <Content Include="css\brands.css" />
+    <Content Include="css\brands.min.css" />
+    <Content Include="css\btncss.css" />
+    <Content Include="css\buttons.css" />
+    <Content Include="css\educate-custon-icon.css" />
+    <Content Include="css\e_sso_style.css" />
+    <Content Include="css\font-awesome.min.css" />
+    <Content Include="css\fontawesome.css" />
+    <Content Include="css\fontawesome.min.css" />
+    <Content Include="css\form.css" />
+    <Content Include="css\gridviewStyle1.css" />
+    <Content Include="css\gridviewStyle2.css" />
+    <Content Include="css\gridviewStyle3.css" />
+    <Content Include="css\gridviewStyle4.css" />
+    <Content Include="css\gridviewStyle5.css" />
+    <Content Include="css\landing-page.css" />
+    <Content Include="css\landing-page.min.css" />
+    <Content Include="css\main.css" />
+    <Content Include="css\meanmenu.min.css" />
+    <Content Include="css\metisMenu-vertical.css" />
+    <Content Include="css\metisMenu.min.css" />
+    <Content Include="css\modals.css" />
+    <Content Include="css\modern-business.css" />
+    <Content Include="css\normalize.css" />
+    <Content Include="css\owl.carousel.css" />
+    <Content Include="css\owl.theme.css" />
+    <Content Include="css\owl.transitions.css" />
+    <Content Include="css\regular.css" />
+    <Content Include="css\regular.min.css" />
+    <Content Include="css\responsive.css" />
+    <Content Include="css\simple-line-icons.css" />
+    <Content Include="css\Site.css" />
+    <Content Include="css\solid.css" />
+    <Content Include="css\solid.min.css" />
+    <Content Include="css\style.css" />
+    <Content Include="css\Style1.css" />
+    <Content Include="css\svg-with-js.css" />
+    <Content Include="css\svg-with-js.min.css" />
+    <Content Include="css\TableTemplates.css" />
+    <Content Include="css\tabs.css" />
+    <Content Include="css\util.css" />
+    <Content Include="css\v4-shims.css" />
+    <Content Include="css\v4-shims.min.css" />
+    <Content Include="fonts\educate-icon.svg" />
+    <Content Include="fonts\font-awesome-4.7.0\css\font-awesome.css" />
+    <Content Include="fonts\font-awesome-4.7.0\css\font-awesome.min.css" />
+    <Content Include="fonts\font-awesome-4.7.0\fonts\fontawesome-webfont.svg" />
+    <Content Include="fonts\font-awesome-4.7.0\HELP-US-OUT.txt" />
+    <Content Include="fonts\fontawesome-webfont.svg" />
+    <Content Include="fonts\gijgo-material.svg" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="frmCSSDashBoard.aspx" />
+    <Content Include="frmLabDashBoard.aspx" />
+    <Content Include="frmDashBoard.aspx" />
+    <Content Include="frmPotDashBoard.aspx" />
+    <Content Include="Images\Ad-TagEntry.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\adminStrip1.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Alarm-entry.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\applications.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\bigdata.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\calenderImg.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\CAMERA-1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\CAMERA-2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\CAMERA-3.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\CAMERA-4.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\camera.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\change_pwd.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\cloud.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\CustomDown-Over.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\CustomDown.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\CustomUp-Over.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\CustomUp.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\database.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\DeleteRed.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\details-icon.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Display.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\edit-icon.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\engineeredsys.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\enterprise.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\grid-alt.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\grid-header.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\grid-pgr.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\hardware.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\icon_details.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\icon_edit.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\icon_search.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\industries.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\java.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\loadingAnim.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\man-icon.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\middleware.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\minus.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\networking.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\noimage.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\operatingsystems.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\orange-circle.svg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\plus.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\register-online-icon.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Report_Icon.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\select.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\selectedtab.GIF">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\solutions.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\sso-f17v2-bgimg.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\storage.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\TagDetail.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\TagEntry.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\touch-tag.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\unselectedtab.GIF">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CSSAdmin.Master" />
+    <Content Include="LabOnly\frmChangePassword.aspx" />
+    <Content Include="LabOnly\index.aspx" />
+    <Content Include="loader.gif" />
+    <Content Include="loadingImage.gif" />
+    <Content Include="shieldui\css\dark-bootstrap-gradient\all.min.css" />
+    <Content Include="shieldui\css\dark-bootstrap-gradient\calendar.min.css" />
+    <Content Include="shieldui\css\dark-bootstrap-gradient\chart.min.css" />
+    <Content Include="shieldui\css\dark-bootstrap-gradient\colorpicker.min.css" />
+    <Content Include="shieldui\css\dark-bootstrap-gradient\core.min.css" />
+    <Content Include="shieldui\css\dark-bootstrap-gradient\editor.min.css" />
+    <Content Include="shieldui\css\dark-bootstrap-gradient\grid.min.css" />
+    <Content Include="shieldui\css\dark-bootstrap-gradient\input.min.css" />
+    <Content Include="shieldui\css\dark-bootstrap-gradient\layout.min.css" />
+    <Content Include="shieldui\css\dark-bootstrap-gradient\loadingpanel.min.css" />
+    <Content Include="shieldui\css\dark-bootstrap-gradient\menu.min.css" />
+    <Content Include="shieldui\css\dark-bootstrap-gradient\pager.min.css" />
+    <Content Include="shieldui\css\dark-bootstrap-gradient\progressbar.min.css" />
+    <Content Include="shieldui\css\dark-bootstrap-gradient\rating.min.css" />
+    <Content Include="shieldui\css\dark-bootstrap-gradient\rtl.min.css" />
+    <Content Include="shieldui\css\dark-bootstrap-gradient\slider.min.css" />
+    <Content Include="shieldui\css\dark-bootstrap-gradient\tagcloud.min.css" />
+    <Content Include="shieldui\css\dark-bootstrap-gradient\timeline.min.css" />
+    <Content Include="shieldui\css\dark-bootstrap-gradient\treemap.min.css" />
+    <Content Include="shieldui\css\dark-bootstrap-gradient\treeview.min.css" />
+    <Content Include="shieldui\css\dark-bootstrap-gradient\upload.min.css" />
+    <Content Include="shieldui\css\dark-bootstrap-gradient\window.min.css" />
+    <Content Include="shieldui\css\dark-bootstrap\all.min.css" />
+    <Content Include="shieldui\css\dark-bootstrap\calendar.min.css" />
+    <Content Include="shieldui\css\dark-bootstrap\chart.min.css" />
+    <Content Include="shieldui\css\dark-bootstrap\colorpicker.min.css" />
+    <Content Include="shieldui\css\dark-bootstrap\core.min.css" />
+    <Content Include="shieldui\css\dark-bootstrap\editor.min.css" />
+    <Content Include="shieldui\css\dark-bootstrap\grid.min.css" />
+    <Content Include="shieldui\css\dark-bootstrap\input.min.css" />
+    <Content Include="shieldui\css\dark-bootstrap\layout.min.css" />
+    <Content Include="shieldui\css\dark-bootstrap\loadingpanel.min.css" />
+    <Content Include="shieldui\css\dark-bootstrap\menu.min.css" />
+    <Content Include="shieldui\css\dark-bootstrap\pager.min.css" />
+    <Content Include="shieldui\css\dark-bootstrap\progressbar.min.css" />
+    <Content Include="shieldui\css\dark-bootstrap\rating.min.css" />
+    <Content Include="shieldui\css\dark-bootstrap\rtl.min.css" />
+    <Content Include="shieldui\css\dark-bootstrap\slider.min.css" />
+    <Content Include="shieldui\css\dark-bootstrap\tagcloud.min.css" />
+    <Content Include="shieldui\css\dark-bootstrap\timeline.min.css" />
+    <Content Include="shieldui\css\dark-bootstrap\treemap.min.css" />
+    <Content Include="shieldui\css\dark-bootstrap\treeview.min.css" />
+    <Content Include="shieldui\css\dark-bootstrap\upload.min.css" />
+    <Content Include="shieldui\css\dark-bootstrap\window.min.css" />
+    <Content Include="shieldui\css\dark-glow-gradient\all.min.css" />
+    <Content Include="shieldui\css\dark-glow-gradient\calendar.min.css" />
+    <Content Include="shieldui\css\dark-glow-gradient\chart.min.css" />
+    <Content Include="shieldui\css\dark-glow-gradient\colorpicker.min.css" />
+    <Content Include="shieldui\css\dark-glow-gradient\core.min.css" />
+    <Content Include="shieldui\css\dark-glow-gradient\editor.min.css" />
+    <Content Include="shieldui\css\dark-glow-gradient\grid.min.css" />
+    <Content Include="shieldui\css\dark-glow-gradient\input.min.css" />
+    <Content Include="shieldui\css\dark-glow-gradient\layout.min.css" />
+    <Content Include="shieldui\css\dark-glow-gradient\loadingpanel.min.css" />
+    <Content Include="shieldui\css\dark-glow-gradient\menu.min.css" />
+    <Content Include="shieldui\css\dark-glow-gradient\pager.min.css" />
+    <Content Include="shieldui\css\dark-glow-gradient\progressbar.min.css" />
+    <Content Include="shieldui\css\dark-glow-gradient\rating.min.css" />
+    <Content Include="shieldui\css\dark-glow-gradient\rtl.min.css" />
+    <Content Include="shieldui\css\dark-glow-gradient\slider.min.css" />
+    <Content Include="shieldui\css\dark-glow-gradient\tagcloud.min.css" />
+    <Content Include="shieldui\css\dark-glow-gradient\timeline.min.css" />
+    <Content Include="shieldui\css\dark-glow-gradient\treemap.min.css" />
+    <Content Include="shieldui\css\dark-glow-gradient\treeview.min.css" />
+    <Content Include="shieldui\css\dark-glow-gradient\upload.min.css" />
+    <Content Include="shieldui\css\dark-glow-gradient\window.min.css" />
+    <Content Include="shieldui\css\dark-glow\all.min.css" />
+    <Content Include="shieldui\css\dark-glow\calendar.min.css" />
+    <Content Include="shieldui\css\dark-glow\chart.min.css" />
+    <Content Include="shieldui\css\dark-glow\colorpicker.min.css" />
+    <Content Include="shieldui\css\dark-glow\core.min.css" />
+    <Content Include="shieldui\css\dark-glow\editor.min.css" />
+    <Content Include="shieldui\css\dark-glow\grid.min.css" />
+    <Content Include="shieldui\css\dark-glow\input.min.css" />
+    <Content Include="shieldui\css\dark-glow\layout.min.css" />
+    <Content Include="shieldui\css\dark-glow\loadingpanel.min.css" />
+    <Content Include="shieldui\css\dark-glow\menu.min.css" />
+    <Content Include="shieldui\css\dark-glow\pager.min.css" />
+    <Content Include="shieldui\css\dark-glow\progressbar.min.css" />
+    <Content Include="shieldui\css\dark-glow\rating.min.css" />
+    <Content Include="shieldui\css\dark-glow\rtl.min.css" />
+    <Content Include="shieldui\css\dark-glow\slider.min.css" />
+    <Content Include="shieldui\css\dark-glow\tagcloud.min.css" />
+    <Content Include="shieldui\css\dark-glow\timeline.min.css" />
+    <Content Include="shieldui\css\dark-glow\treemap.min.css" />
+    <Content Include="shieldui\css\dark-glow\treeview.min.css" />
+    <Content Include="shieldui\css\dark-glow\upload.min.css" />
+    <Content Include="shieldui\css\dark-glow\window.min.css" />
+    <Content Include="shieldui\css\dark-gradient\all.min.css" />
+    <Content Include="shieldui\css\dark-gradient\calendar.min.css" />
+    <Content Include="shieldui\css\dark-gradient\chart.min.css" />
+    <Content Include="shieldui\css\dark-gradient\colorpicker.min.css" />
+    <Content Include="shieldui\css\dark-gradient\core.min.css" />
+    <Content Include="shieldui\css\dark-gradient\editor.min.css" />
+    <Content Include="shieldui\css\dark-gradient\grid.min.css" />
+    <Content Include="shieldui\css\dark-gradient\input.min.css" />
+    <Content Include="shieldui\css\dark-gradient\layout.min.css" />
+    <Content Include="shieldui\css\dark-gradient\loadingpanel.min.css" />
+    <Content Include="shieldui\css\dark-gradient\menu.min.css" />
+    <Content Include="shieldui\css\dark-gradient\pager.min.css" />
+    <Content Include="shieldui\css\dark-gradient\progressbar.min.css" />
+    <Content Include="shieldui\css\dark-gradient\rating.min.css" />
+    <Content Include="shieldui\css\dark-gradient\rtl.min.css" />
+    <Content Include="shieldui\css\dark-gradient\slider.min.css" />
+    <Content Include="shieldui\css\dark-gradient\tagcloud.min.css" />
+    <Content Include="shieldui\css\dark-gradient\timeline.min.css" />
+    <Content Include="shieldui\css\dark-gradient\treemap.min.css" />
+    <Content Include="shieldui\css\dark-gradient\treeview.min.css" />
+    <Content Include="shieldui\css\dark-gradient\upload.min.css" />
+    <Content Include="shieldui\css\dark-gradient\window.min.css" />
+    <Content Include="shieldui\css\dark-mint-gradient\all.min.css" />
+    <Content Include="shieldui\css\dark-mint-gradient\calendar.min.css" />
+    <Content Include="shieldui\css\dark-mint-gradient\chart.min.css" />
+    <Content Include="shieldui\css\dark-mint-gradient\colorpicker.min.css" />
+    <Content Include="shieldui\css\dark-mint-gradient\core.min.css" />
+    <Content Include="shieldui\css\dark-mint-gradient\editor.min.css" />
+    <Content Include="shieldui\css\dark-mint-gradient\grid.min.css" />
+    <Content Include="shieldui\css\dark-mint-gradient\input.min.css" />
+    <Content Include="shieldui\css\dark-mint-gradient\layout.min.css" />
+    <Content Include="shieldui\css\dark-mint-gradient\loadingpanel.min.css" />
+    <Content Include="shieldui\css\dark-mint-gradient\menu.min.css" />
+    <Content Include="shieldui\css\dark-mint-gradient\pager.min.css" />
+    <Content Include="shieldui\css\dark-mint-gradient\progressbar.min.css" />
+    <Content Include="shieldui\css\dark-mint-gradient\rating.min.css" />
+    <Content Include="shieldui\css\dark-mint-gradient\rtl.min.css" />
+    <Content Include="shieldui\css\dark-mint-gradient\slider.min.css" />
+    <Content Include="shieldui\css\dark-mint-gradient\tagcloud.min.css" />
+    <Content Include="shieldui\css\dark-mint-gradient\timeline.min.css" />
+    <Content Include="shieldui\css\dark-mint-gradient\treemap.min.css" />
+    <Content Include="shieldui\css\dark-mint-gradient\treeview.min.css" />
+    <Content Include="shieldui\css\dark-mint-gradient\upload.min.css" />
+    <Content Include="shieldui\css\dark-mint-gradient\window.min.css" />
+    <Content Include="shieldui\css\dark-mint\all.min.css" />
+    <Content Include="shieldui\css\dark-mint\calendar.min.css" />
+    <Content Include="shieldui\css\dark-mint\chart.min.css" />
+    <Content Include="shieldui\css\dark-mint\colorpicker.min.css" />
+    <Content Include="shieldui\css\dark-mint\core.min.css" />
+    <Content Include="shieldui\css\dark-mint\editor.min.css" />
+    <Content Include="shieldui\css\dark-mint\grid.min.css" />
+    <Content Include="shieldui\css\dark-mint\input.min.css" />
+    <Content Include="shieldui\css\dark-mint\layout.min.css" />
+    <Content Include="shieldui\css\dark-mint\loadingpanel.min.css" />
+    <Content Include="shieldui\css\dark-mint\menu.min.css" />
+    <Content Include="shieldui\css\dark-mint\pager.min.css" />
+    <Content Include="shieldui\css\dark-mint\progressbar.min.css" />
+    <Content Include="shieldui\css\dark-mint\rating.min.css" />
+    <Content Include="shieldui\css\dark-mint\rtl.min.css" />
+    <Content Include="shieldui\css\dark-mint\slider.min.css" />
+    <Content Include="shieldui\css\dark-mint\tagcloud.min.css" />
+    <Content Include="shieldui\css\dark-mint\timeline.min.css" />
+    <Content Include="shieldui\css\dark-mint\treemap.min.css" />
+    <Content Include="shieldui\css\dark-mint\treeview.min.css" />
+    <Content Include="shieldui\css\dark-mint\upload.min.css" />
+    <Content Include="shieldui\css\dark-mint\window.min.css" />
+    <Content Include="shieldui\css\dark\all.min.css" />
+    <Content Include="shieldui\css\dark\calendar.min.css" />
+    <Content Include="shieldui\css\dark\chart.min.css" />
+    <Content Include="shieldui\css\dark\colorpicker.min.css" />
+    <Content Include="shieldui\css\dark\core.min.css" />
+    <Content Include="shieldui\css\dark\editor.min.css" />
+    <Content Include="shieldui\css\dark\grid.min.css" />
+    <Content Include="shieldui\css\dark\input.min.css" />
+    <Content Include="shieldui\css\dark\layout.min.css" />
+    <Content Include="shieldui\css\dark\loadingpanel.min.css" />
+    <Content Include="shieldui\css\dark\menu.min.css" />
+    <Content Include="shieldui\css\dark\pager.min.css" />
+    <Content Include="shieldui\css\dark\progressbar.min.css" />
+    <Content Include="shieldui\css\dark\rating.min.css" />
+    <Content Include="shieldui\css\dark\rtl.min.css" />
+    <Content Include="shieldui\css\dark\slider.min.css" />
+    <Content Include="shieldui\css\dark\tagcloud.min.css" />
+    <Content Include="shieldui\css\dark\timeline.min.css" />
+    <Content Include="shieldui\css\dark\treemap.min.css" />
+    <Content Include="shieldui\css\dark\treeview.min.css" />
+    <Content Include="shieldui\css\dark\upload.min.css" />
+    <Content Include="shieldui\css\dark\window.min.css" />
+    <Content Include="shieldui\css\img\editor.png" />
+    <Content Include="shieldui\css\img\loading-dark-bootstrap-gradient-small.gif" />
+    <Content Include="shieldui\css\img\loading-dark-bootstrap-gradient.gif" />
+    <Content Include="shieldui\css\img\loading-dark-bootstrap-small.gif" />
+    <Content Include="shieldui\css\img\loading-dark-bootstrap.gif" />
+    <Content Include="shieldui\css\img\loading-dark-glow-gradient-small.gif" />
+    <Content Include="shieldui\css\img\loading-dark-glow-gradient.gif" />
+    <Content Include="shieldui\css\img\loading-dark-glow-small.gif" />
+    <Content Include="shieldui\css\img\loading-dark-glow.gif" />
+    <Content Include="shieldui\css\img\loading-dark-gradient-small.gif" />
+    <Content Include="shieldui\css\img\loading-dark-gradient.gif" />
+    <Content Include="shieldui\css\img\loading-dark-mint-gradient-small.gif" />
+    <Content Include="shieldui\css\img\loading-dark-mint-gradient.gif" />
+    <Content Include="shieldui\css\img\loading-dark-mint-small.gif" />
+    <Content Include="shieldui\css\img\loading-dark-mint.gif" />
+    <Content Include="shieldui\css\img\loading-dark-small.gif" />
+    <Content Include="shieldui\css\img\loading-dark.gif" />
+    <Content Include="shieldui\css\img\loading-light-bootstrap-gradient-small.gif" />
+    <Content Include="shieldui\css\img\loading-light-bootstrap-gradient.gif" />
+    <Content Include="shieldui\css\img\loading-light-bootstrap-small.gif" />
+    <Content Include="shieldui\css\img\loading-light-bootstrap.gif" />
+    <Content Include="shieldui\css\img\loading-light-glow-gradient-small.gif" />
+    <Content Include="shieldui\css\img\loading-light-glow-gradient.gif" />
+    <Content Include="shieldui\css\img\loading-light-glow-small.gif" />
+    <Content Include="shieldui\css\img\loading-light-glow.gif" />
+    <Content Include="shieldui\css\img\loading-light-gradient-small.gif" />
+    <Content Include="shieldui\css\img\loading-light-gradient.gif" />
+    <Content Include="shieldui\css\img\loading-light-mint-gradient-small.gif" />
+    <Content Include="shieldui\css\img\loading-light-mint-gradient.gif" />
+    <Content Include="shieldui\css\img\loading-light-mint-small.gif" />
+    <Content Include="shieldui\css\img\loading-light-mint.gif" />
+    <Content Include="shieldui\css\img\loading-light-small.gif" />
+    <Content Include="shieldui\css\img\loading-light.gif" />
+    <Content Include="shieldui\css\img\shieldui-sprite.png" />
+    <Content Include="shieldui\css\img\stars.png" />
+    <Content Include="shieldui\css\light-bootstrap-gradient\all.min.css" />
+    <Content Include="shieldui\css\light-bootstrap-gradient\calendar.min.css" />
+    <Content Include="shieldui\css\light-bootstrap-gradient\chart.min.css" />
+    <Content Include="shieldui\css\light-bootstrap-gradient\colorpicker.min.css" />
+    <Content Include="shieldui\css\light-bootstrap-gradient\core.min.css" />
+    <Content Include="shieldui\css\light-bootstrap-gradient\editor.min.css" />
+    <Content Include="shieldui\css\light-bootstrap-gradient\grid.min.css" />
+    <Content Include="shieldui\css\light-bootstrap-gradient\input.min.css" />
+    <Content Include="shieldui\css\light-bootstrap-gradient\layout.min.css" />
+    <Content Include="shieldui\css\light-bootstrap-gradient\loadingpanel.min.css" />
+    <Content Include="shieldui\css\light-bootstrap-gradient\menu.min.css" />
+    <Content Include="shieldui\css\light-bootstrap-gradient\pager.min.css" />
+    <Content Include="shieldui\css\light-bootstrap-gradient\progressbar.min.css" />
+    <Content Include="shieldui\css\light-bootstrap-gradient\rating.min.css" />
+    <Content Include="shieldui\css\light-bootstrap-gradient\rtl.min.css" />
+    <Content Include="shieldui\css\light-bootstrap-gradient\slider.min.css" />
+    <Content Include="shieldui\css\light-bootstrap-gradient\tagcloud.min.css" />
+    <Content Include="shieldui\css\light-bootstrap-gradient\timeline.min.css" />
+    <Content Include="shieldui\css\light-bootstrap-gradient\treemap.min.css" />
+    <Content Include="shieldui\css\light-bootstrap-gradient\treeview.min.css" />
+    <Content Include="shieldui\css\light-bootstrap-gradient\upload.min.css" />
+    <Content Include="shieldui\css\light-bootstrap-gradient\window.min.css" />
+    <Content Include="shieldui\css\light-bootstrap\all.min.css" />
+    <Content Include="shieldui\css\light-bootstrap\calendar.min.css" />
+    <Content Include="shieldui\css\light-bootstrap\chart.min.css" />
+    <Content Include="shieldui\css\light-bootstrap\colorpicker.min.css" />
+    <Content Include="shieldui\css\light-bootstrap\core.min.css" />
+    <Content Include="shieldui\css\light-bootstrap\editor.min.css" />
+    <Content Include="shieldui\css\light-bootstrap\grid.min.css" />
+    <Content Include="shieldui\css\light-bootstrap\input.min.css" />
+    <Content Include="shieldui\css\light-bootstrap\layout.min.css" />
+    <Content Include="shieldui\css\light-bootstrap\loadingpanel.min.css" />
+    <Content Include="shieldui\css\light-bootstrap\menu.min.css" />
+    <Content Include="shieldui\css\light-bootstrap\pager.min.css" />
+    <Content Include="shieldui\css\light-bootstrap\progressbar.min.css" />
+    <Content Include="shieldui\css\light-bootstrap\rating.min.css" />
+    <Content Include="shieldui\css\light-bootstrap\rtl.min.css" />
+    <Content Include="shieldui\css\light-bootstrap\slider.min.css" />
+    <Content Include="shieldui\css\light-bootstrap\tagcloud.min.css" />
+    <Content Include="shieldui\css\light-bootstrap\timeline.min.css" />
+    <Content Include="shieldui\css\light-bootstrap\treemap.min.css" />
+    <Content Include="shieldui\css\light-bootstrap\treeview.min.css" />
+    <Content Include="shieldui\css\light-bootstrap\upload.min.css" />
+    <Content Include="shieldui\css\light-bootstrap\window.min.css" />
+    <Content Include="shieldui\css\light-glow-gradient\all.min.css" />
+    <Content Include="shieldui\css\light-glow-gradient\calendar.min.css" />
+    <Content Include="shieldui\css\light-glow-gradient\chart.min.css" />
+    <Content Include="shieldui\css\light-glow-gradient\colorpicker.min.css" />
+    <Content Include="shieldui\css\light-glow-gradient\core.min.css" />
+    <Content Include="shieldui\css\light-glow-gradient\editor.min.css" />
+    <Content Include="shieldui\css\light-glow-gradient\grid.min.css" />
+    <Content Include="shieldui\css\light-glow-gradient\input.min.css" />
+    <Content Include="shieldui\css\light-glow-gradient\layout.min.css" />
+    <Content Include="shieldui\css\light-glow-gradient\loadingpanel.min.css" />
+    <Content Include="shieldui\css\light-glow-gradient\menu.min.css" />
+    <Content Include="shieldui\css\light-glow-gradient\pager.min.css" />
+    <Content Include="shieldui\css\light-glow-gradient\progressbar.min.css" />
+    <Content Include="shieldui\css\light-glow-gradient\rating.min.css" />
+    <Content Include="shieldui\css\light-glow-gradient\rtl.min.css" />
+    <Content Include="shieldui\css\light-glow-gradient\slider.min.css" />
+    <Content Include="shieldui\css\light-glow-gradient\tagcloud.min.css" />
+    <Content Include="shieldui\css\light-glow-gradient\timeline.min.css" />
+    <Content Include="shieldui\css\light-glow-gradient\treemap.min.css" />
+    <Content Include="shieldui\css\light-glow-gradient\treeview.min.css" />
+    <Content Include="shieldui\css\light-glow-gradient\upload.min.css" />
+    <Content Include="shieldui\css\light-glow-gradient\window.min.css" />
+    <Content Include="shieldui\css\light-glow\all.min.css" />
+    <Content Include="shieldui\css\light-glow\calendar.min.css" />
+    <Content Include="shieldui\css\light-glow\chart.min.css" />
+    <Content Include="shieldui\css\light-glow\colorpicker.min.css" />
+    <Content Include="shieldui\css\light-glow\core.min.css" />
+    <Content Include="shieldui\css\light-glow\editor.min.css" />
+    <Content Include="shieldui\css\light-glow\grid.min.css" />
+    <Content Include="shieldui\css\light-glow\input.min.css" />
+    <Content Include="shieldui\css\light-glow\layout.min.css" />
+    <Content Include="shieldui\css\light-glow\loadingpanel.min.css" />
+    <Content Include="shieldui\css\light-glow\menu.min.css" />
+    <Content Include="shieldui\css\light-glow\pager.min.css" />
+    <Content Include="shieldui\css\light-glow\progressbar.min.css" />
+    <Content Include="shieldui\css\light-glow\rating.min.css" />
+    <Content Include="shieldui\css\light-glow\rtl.min.css" />
+    <Content Include="shieldui\css\light-glow\slider.min.css" />
+    <Content Include="shieldui\css\light-glow\tagcloud.min.css" />
+    <Content Include="shieldui\css\light-glow\timeline.min.css" />
+    <Content Include="shieldui\css\light-glow\treemap.min.css" />
+    <Content Include="shieldui\css\light-glow\treeview.min.css" />
+    <Content Include="shieldui\css\light-glow\upload.min.css" />
+    <Content Include="shieldui\css\light-glow\window.min.css" />
+    <Content Include="shieldui\css\light-gradient\all.min.css" />
+    <Content Include="shieldui\css\light-gradient\calendar.min.css" />
+    <Content Include="shieldui\css\light-gradient\chart.min.css" />
+    <Content Include="shieldui\css\light-gradient\colorpicker.min.css" />
+    <Content Include="shieldui\css\light-gradient\core.min.css" />
+    <Content Include="shieldui\css\light-gradient\editor.min.css" />
+    <Content Include="shieldui\css\light-gradient\grid.min.css" />
+    <Content Include="shieldui\css\light-gradient\input.min.css" />
+    <Content Include="shieldui\css\light-gradient\layout.min.css" />
+    <Content Include="shieldui\css\light-gradient\loadingpanel.min.css" />
+    <Content Include="shieldui\css\light-gradient\menu.min.css" />
+    <Content Include="shieldui\css\light-gradient\pager.min.css" />
+    <Content Include="shieldui\css\light-gradient\progressbar.min.css" />
+    <Content Include="shieldui\css\light-gradient\rating.min.css" />
+    <Content Include="shieldui\css\light-gradient\rtl.min.css" />
+    <Content Include="shieldui\css\light-gradient\slider.min.css" />
+    <Content Include="shieldui\css\light-gradient\tagcloud.min.css" />
+    <Content Include="shieldui\css\light-gradient\timeline.min.css" />
+    <Content Include="shieldui\css\light-gradient\treemap.min.css" />
+    <Content Include="shieldui\css\light-gradient\treeview.min.css" />
+    <Content Include="shieldui\css\light-gradient\upload.min.css" />
+    <Content Include="shieldui\css\light-gradient\window.min.css" />
+    <Content Include="shieldui\css\light-mint-gradient\all.min.css" />
+    <Content Include="shieldui\css\light-mint-gradient\calendar.min.css" />
+    <Content Include="shieldui\css\light-mint-gradient\chart.min.css" />
+    <Content Include="shieldui\css\light-mint-gradient\colorpicker.min.css" />
+    <Content Include="shieldui\css\light-mint-gradient\core.min.css" />
+    <Content Include="shieldui\css\light-mint-gradient\editor.min.css" />
+    <Content Include="shieldui\css\light-mint-gradient\grid.min.css" />
+    <Content Include="shieldui\css\light-mint-gradient\input.min.css" />
+    <Content Include="shieldui\css\light-mint-gradient\layout.min.css" />
+    <Content Include="shieldui\css\light-mint-gradient\loadingpanel.min.css" />
+    <Content Include="shieldui\css\light-mint-gradient\menu.min.css" />
+    <Content Include="shieldui\css\light-mint-gradient\pager.min.css" />
+    <Content Include="shieldui\css\light-mint-gradient\progressbar.min.css" />
+    <Content Include="shieldui\css\light-mint-gradient\rating.min.css" />
+    <Content Include="shieldui\css\light-mint-gradient\rtl.min.css" />
+    <Content Include="shieldui\css\light-mint-gradient\slider.min.css" />
+    <Content Include="shieldui\css\light-mint-gradient\tagcloud.min.css" />
+    <Content Include="shieldui\css\light-mint-gradient\timeline.min.css" />
+    <Content Include="shieldui\css\light-mint-gradient\treemap.min.css" />
+    <Content Include="shieldui\css\light-mint-gradient\treeview.min.css" />
+    <Content Include="shieldui\css\light-mint-gradient\upload.min.css" />
+    <Content Include="shieldui\css\light-mint-gradient\window.min.css" />
+    <Content Include="shieldui\css\light-mint\all.min.css" />
+    <Content Include="shieldui\css\light-mint\calendar.min.css" />
+    <Content Include="shieldui\css\light-mint\chart.min.css" />
+    <Content Include="shieldui\css\light-mint\colorpicker.min.css" />
+    <Content Include="shieldui\css\light-mint\core.min.css" />
+    <Content Include="shieldui\css\light-mint\editor.min.css" />
+    <Content Include="shieldui\css\light-mint\grid.min.css" />
+    <Content Include="shieldui\css\light-mint\input.min.css" />
+    <Content Include="shieldui\css\light-mint\layout.min.css" />
+    <Content Include="shieldui\css\light-mint\loadingpanel.min.css" />
+    <Content Include="shieldui\css\light-mint\menu.min.css" />
+    <Content Include="shieldui\css\light-mint\pager.min.css" />
+    <Content Include="shieldui\css\light-mint\progressbar.min.css" />
+    <Content Include="shieldui\css\light-mint\rating.min.css" />
+    <Content Include="shieldui\css\light-mint\rtl.min.css" />
+    <Content Include="shieldui\css\light-mint\slider.min.css" />
+    <Content Include="shieldui\css\light-mint\tagcloud.min.css" />
+    <Content Include="shieldui\css\light-mint\timeline.min.css" />
+    <Content Include="shieldui\css\light-mint\treemap.min.css" />
+    <Content Include="shieldui\css\light-mint\treeview.min.css" />
+    <Content Include="shieldui\css\light-mint\upload.min.css" />
+    <Content Include="shieldui\css\light-mint\window.min.css" />
+    <Content Include="shieldui\css\light\all.min.css" />
+    <Content Include="shieldui\css\light\calendar.min.css" />
+    <Content Include="shieldui\css\light\chart.min.css" />
+    <Content Include="shieldui\css\light\colorpicker.min.css" />
+    <Content Include="shieldui\css\light\core.min.css" />
+    <Content Include="shieldui\css\light\editor.min.css" />
+    <Content Include="shieldui\css\light\grid.min.css" />
+    <Content Include="shieldui\css\light\input.min.css" />
+    <Content Include="shieldui\css\light\layout.min.css" />
+    <Content Include="shieldui\css\light\loadingpanel.min.css" />
+    <Content Include="shieldui\css\light\menu.min.css" />
+    <Content Include="shieldui\css\light\pager.min.css" />
+    <Content Include="shieldui\css\light\progressbar.min.css" />
+    <Content Include="shieldui\css\light\rating.min.css" />
+    <Content Include="shieldui\css\light\rtl.min.css" />
+    <Content Include="shieldui\css\light\slider.min.css" />
+    <Content Include="shieldui\css\light\tagcloud.min.css" />
+    <Content Include="shieldui\css\light\timeline.min.css" />
+    <Content Include="shieldui\css\light\treemap.min.css" />
+    <Content Include="shieldui\css\light\treeview.min.css" />
+    <Content Include="shieldui\css\light\upload.min.css" />
+    <Content Include="shieldui\css\light\window.min.css" />
+    <Content Include="shieldui\js\jquery-1.11.1.min.js" />
+    <Content Include="shieldui\js\jszip.min.js" />
+    <Content Include="shieldui\js\shieldui-all.min.js" />
+    <Content Include="shieldui\js\shieldui-barcode.min.js" />
+    <Content Include="shieldui\js\shieldui-calendar.min.js" />
+    <Content Include="shieldui\js\shieldui-chart.min.js" />
+    <Content Include="shieldui\js\shieldui-colorpicker.min.js" />
+    <Content Include="shieldui\js\shieldui-core.min.js" />
+    <Content Include="shieldui\js\shieldui-editor.min.js" />
+    <Content Include="shieldui\js\shieldui-grid.min.js" />
+    <Content Include="shieldui\js\shieldui-input.min.js" />
+    <Content Include="shieldui\js\shieldui-layout.min.js" />
+    <Content Include="shieldui\js\shieldui-loadingpanel.min.js" />
+    <Content Include="shieldui\js\shieldui-menu.min.js" />
+    <Content Include="shieldui\js\shieldui-pager.min.js" />
+    <Content Include="shieldui\js\shieldui-progressbar.min.js" />
+    <Content Include="shieldui\js\shieldui-qrcode.min.js" />
+    <Content Include="shieldui\js\shieldui-rating.min.js" />
+    <Content Include="shieldui\js\shieldui-slider.min.js" />
+    <Content Include="shieldui\js\shieldui-tagcloud.min.js" />
+    <Content Include="shieldui\js\shieldui-timeline.min.js" />
+    <Content Include="shieldui\js\shieldui-treemap.min.js" />
+    <Content Include="shieldui\js\shieldui-treeview.min.js" />
+    <Content Include="shieldui\js\shieldui-upload.min.js" />
+    <Content Include="shieldui\js\shieldui-window.min.js" />
+    <Content Include="shieldui\NET20\Shield.Web.UI.dll" />
+    <Content Include="shieldui\NET20\Shield.Web.UI.pdb" />
+    <Content Include="shieldui\NET20\Shield.Web.UI.XML" />
+    <Content Include="shieldui\NET35\Shield.Web.UI.dll" />
+    <Content Include="shieldui\NET35\Shield.Web.UI.pdb" />
+    <Content Include="shieldui\NET35\Shield.Web.UI.XML" />
+    <Content Include="shieldui\NET40\Shield.Web.UI.dll" />
+    <Content Include="shieldui\NET40\Shield.Web.UI.pdb" />
+    <Content Include="shieldui\NET40\Shield.Web.UI.XML" />
+    <Content Include="shieldui\NET45\Shield.Web.UI.dll" />
+    <Content Include="shieldui\NET45\Shield.Web.UI.pdb" />
+    <Content Include="shieldui\NET45\Shield.Web.UI.XML" />
+    <Content Include="SignedOff.html" />
+    <Content Include="Styles\Login\images\banner.jpg" />
+    <Content Include="Styles\Login\images\CMS INTERFACE-5.jpg" />
+    <Content Include="Styles\Login\images\logo.jpg" />
+    <Content Include="Styles\Login\images\utkal-alumina-international-limited-mast.jpg" />
+    <Content Include="TechTeam\frmCategoryGroupMaster.aspx" />
+    <Content Include="TechTeam\frmChangePassword.aspx" />
+    <Content Include="Images\128px-IPhone_icon_green.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\50px-RegistryList.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\88-18-c.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\About.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\add-user.PNG">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\addc.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\addp.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\add_menu.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\add_news.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\add_news.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\add_news.PNG">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\add_pic.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\add_place.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\add_pub.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\add_q.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\add_report.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\add_reseller.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\add_shuttles.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\add_trades.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\add_vid.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\admin.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\adminStrip.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\al.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\AL.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\ALL.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Ana.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Ana2.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\ani62.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\ANL.PNG">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\archive.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\As.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\AST.PNG">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\atr.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\AutoTagList.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\avatar.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\avatar04.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\avatar2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\avatar3.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\avatar5.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\backbtn.PNG">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\back_button.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\back_c.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\BDM.PNG">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\bg.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\bg.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\block.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\BML.PNG">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Box-orange-256.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\BringtoFront.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\btn_Cancel.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\btn_reseller.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\btn_Submit.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\bu.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\button.PNG">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\b_edit.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\c.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\calendar.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Calendar_scheduleHS.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\calender.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\car-48x48.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\cart.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\cc.PNG">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\changepwd.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\CheckentryForm.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\close_button.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\collage.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\comingsoon.PNG">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\comp.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\contact.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\contactlist_48x48_alpha.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\control_panel.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\control_panel.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Copy of comingsoon.PNG">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\copyVersion.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\cpanel.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\create_user.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\create_user.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\crm.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\crm.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\cross_icon_normal.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\csa.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\cub.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\custl.PNG">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\da.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\dashboard.JPG">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\dd.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\degree.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\delete-img.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\delete.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\display_box_left_bottom.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\display_box_left_top.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\display_box_right_bottom.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\display_box_right_top.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\display_box_top_mid.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Dlpanel.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\dn.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\docs.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\download.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\downloadButton.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\downloads.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\DTLogo.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\dynamic.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\ealert-footer.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\edit-img.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\edit.ico">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\edit.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\education-counts.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\elb.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Em.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\EM.PNG">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\email.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\EnterKey.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\entryform.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\EntryForm.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\entryFormResult.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\entryFormResult.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Eq.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\event.PNG">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\excel-icon.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\excr.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\expdb.PNG">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\faultEntry.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\faultList.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\favicon.ico">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\folder-company.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\footerLine.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\generate_link.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\gen_pay.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\gen_pay_list.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\go_back.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\GP1.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\GP2.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\grid_header_bg.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\GSD.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\GSD.PNG">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\GSD2.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\g_icon_product.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\header2.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\header4.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\header5.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\header6.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\header7.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\header8.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\header9.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\HILLogo.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\holiday.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\hover_item_back.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\icon_add.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\icon_delete.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\icon_texteditor.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\icon_users.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\img.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\indicator.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Info.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\inv.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\KPI.PNG">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\L1.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\L2.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\L3.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\LabelDesign.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\LabelDesign.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\LabelDesignList.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\LabelDesignMap.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\LB.PNG">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\lbl.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\leftLinkNormal.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\leftLinkOver.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\lgb.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\list.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\list.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\liste.PNG">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\loading.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\lock.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\log.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\log.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\login-button.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\login-button.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\loginHead.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\loginPanelBg.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\login_button.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\logo.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\logosn.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\logout.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\logout.JPG">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\logout_btn_left.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\logout_btn_right.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\logs.PNG">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\machine.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\machineVersion.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\MahanBanner.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Mahanlogo.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\makel.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\marksheet.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\MasterTagEntry.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\MasterTagList.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\MasterTagList.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\menu_bg.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Mes.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\more_details_icon.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\more_details_icon.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\muser.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\myaccount.JPG">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\MyAccount.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\navigation.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\news.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\news_list.PNG">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\no_image.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\off.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\on.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\one_pixel.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\order.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\order_type.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\pageloader.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\paper.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\PERM.PNG">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\pf.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\PlantLine.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\PlantLine.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\plantunit.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\plist.PNG">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\preview.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\print.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\PRPAM.PNG">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\puib.PNG">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Report.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\report.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Res.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\resad.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\resel.PNG">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\reslist.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\review.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\risk.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Sampleimg.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Search.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Sec.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\selected_item_back.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\semester.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\sku.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\sku.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\SKUMapping.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\skuMappingList.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\skumappingList.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\slide1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Slide2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Slide3.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Slide4.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Slide5.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Slpanel.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\SP.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\sprite.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Stage_BG_btm.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\static.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\student.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\subject.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\teamName.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\three_pixel.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\titlebar_bg.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\trade.PNG">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\tradel.PNG">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\transport.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\trash.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\two_pixel.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\unblock.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\university.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\upanel.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\update.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\update.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\updates.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\update_b.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\upload-button.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\upload_file.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\urate.PNG">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\user.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\userPermission.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\userRegistration.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\userRegistration.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\user_list.PNG">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\vd.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\vdd.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\web.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Styles\Login\css\main.css" />
+    <Content Include="Styles\Login\css\util.css" />
+    <Content Include="Styles\Login\fonts\font-awesome-4.7.0\css\font-awesome.css" />
+    <Content Include="Styles\Login\fonts\font-awesome-4.7.0\css\font-awesome.min.css" />
+    <Content Include="Styles\Login\fonts\font-awesome-4.7.0\fonts\fontawesome-webfont.svg" />
+    <Content Include="Styles\Login\fonts\font-awesome-4.7.0\HELP-US-OUT.txt" />
+    <Content Include="Styles\Login\fonts\montserrat\OFL.txt" />
+    <Content Include="Styles\Login\images\HILLogo.jpg" />
+    <Content Include="Styles\Login\images\icons\favicon.ico" />
+    <Content Include="Styles\Login\images\img-01.png" />
+    <Content Include="Styles\Login\images\PG.jpg" />
+    <Content Include="Styles\Login\js\main.js" />
+    <Content Include="Styles\Login\Login.html" />
+    <Content Include="Styles\Login\vendor\animate\animate.css" />
+    <Content Include="Styles\Login\vendor\bootstrap\css\bootstrap-grid.css" />
+    <Content Include="Styles\Login\vendor\bootstrap\css\bootstrap-grid.min.css" />
+    <Content Include="Styles\Login\vendor\bootstrap\css\bootstrap-reboot.css" />
+    <Content Include="Styles\Login\vendor\bootstrap\css\bootstrap-reboot.min.css" />
+    <Content Include="Styles\Login\vendor\bootstrap\css\bootstrap.css" />
+    <Content Include="Styles\Login\vendor\bootstrap\css\bootstrap.min.css" />
+    <Content Include="Styles\Login\vendor\bootstrap\js\bootstrap.js" />
+    <Content Include="Styles\Login\vendor\bootstrap\js\bootstrap.min.js" />
+    <Content Include="Styles\Login\vendor\bootstrap\js\popper.js" />
+    <Content Include="Styles\Login\vendor\bootstrap\js\popper.min.js" />
+    <Content Include="Styles\Login\vendor\bootstrap\js\tooltip.js" />
+    <Content Include="Styles\Login\vendor\css-hamburgers\hamburgers.css" />
+    <Content Include="Styles\Login\vendor\css-hamburgers\hamburgers.min.css" />
+    <Content Include="Styles\Login\vendor\jquery\jquery-3.2.1.min.js" />
+    <Content Include="Styles\Login\vendor\select2\select2.css" />
+    <Content Include="Styles\Login\vendor\select2\select2.js" />
+    <Content Include="Styles\Login\vendor\select2\select2.min.css" />
+    <Content Include="Styles\Login\vendor\select2\select2.min.js" />
+    <Content Include="Styles\Login\vendor\tilt\tilt.jquery.min.js" />
+    <Content Include="TechTeam\frmCokeDynamic.aspx" />
+    <Content Include="TechTeam\frmCokeDynamicEdit.aspx" />
+    <Content Include="TechTeam\frmCokeDynamicResult.aspx" />
+    <Content Include="TechTeam\frmCokeSuplier.aspx" />
+    <Content Include="TechTeam\frmCokeSuplierEdit.aspx" />
+    <Content Include="TechTeam\frmCanteenType.aspx" />
+    <Content Include="TechTeam\frmCanteenTypeEdit.aspx" />
+    <Content Include="TechTeam\frmItemCategoryMaster.aspx" />
+    <Content Include="TechTeam\frmItemMaster.aspx" />
+    <Content Include="TechTeam\frmUser.aspx" />
+    <Content Include="TechTeam\frmUserEdit.aspx" />
+    <Content Include="TechTeam\img\blog-details\1.jpg" />
+    <Content Include="TechTeam\img\clear.png" />
+    <Content Include="TechTeam\img\contact\1.jpg" />
+    <Content Include="TechTeam\img\contact\2.jpg" />
+    <Content Include="TechTeam\img\contact\3.jpg" />
+    <Content Include="TechTeam\img\contact\4.jpg" />
+    <Content Include="TechTeam\img\courses\1.jpg" />
+    <Content Include="TechTeam\img\courses\2.jpg" />
+    <Content Include="TechTeam\img\courses\3.jpg" />
+    <Content Include="TechTeam\img\cropper\1.jpg" />
+    <Content Include="TechTeam\img\favicon.ico" />
+    <Content Include="TechTeam\img\green1.png" />
+    <Content Include="TechTeam\img\loading.gif" />
+    <Content Include="TechTeam\img\logo\logo.png" />
+    <Content Include="TechTeam\img\logo\logosn.png" />
+    <Content Include="TechTeam\img\logo\Mahanlogo.jpg" />
+    <Content Include="TechTeam\img\Mahanlogo.jpg" />
+    <Content Include="TechTeam\img\notification\1.jpg" />
+    <Content Include="TechTeam\img\notification\2.jpg" />
+    <Content Include="TechTeam\img\notification\3.jpg" />
+    <Content Include="TechTeam\img\notification\4.jpg" />
+    <Content Include="TechTeam\img\notification\5.jpg" />
+    <Content Include="TechTeam\img\notification\6.jpg" />
+    <Content Include="TechTeam\img\product\book-1.jpg" />
+    <Content Include="TechTeam\img\product\book-2.jpg" />
+    <Content Include="TechTeam\img\product\book-3.jpg" />
+    <Content Include="TechTeam\img\product\book-4.jpg" />
+    <Content Include="TechTeam\img\product\pro4.jpg" />
+    <Content Include="TechTeam\img\product\profile-bg.jpg" />
+    <Content Include="TechTeam\img\profile\1.jpg" />
+    <Content Include="TechTeam\img\student\1.jpg" />
+    <Content Include="TechTeam\img\student\2.jpg" />
+    <Content Include="TechTeam\img\student\3.jpg" />
+    <Content Include="TechTeam\img\student\4.jpg" />
+    <Content Include="TechTeam\index.aspx" />
+    <Content Include="TechTeam\index.html" />
+    <Content Include="TechTeam\rounded-chart.html" />
+    <Content Include="TechTeam\style.css" />
+    <Content Include="links.html" />
+    <Content Include="Login.aspx" />
+    <Content Include="stylesheet\bootstrap.min.css" />
+    <Content Include="stylesheet\calendar-blue.css" />
+    <Content Include="stylesheet\calendar-blue_old.css" />
+    <Content Include="stylesheet\style.css" />
+    <Content Include="stylesheet\styleadmin.css" />
+    <Content Include="stylesheet\template_css.css" />
+    <Content Include="stylesheet\theme.css" />
+    <Content Include="stylesheet\ticker.css" />
+    <Content Include="Styles\bootstrap.min.css" />
+    <Content Include="Styles\calendar-blue.css" />
+    <Content Include="Styles\calendar-blue_old.css" />
+    <Content Include="Styles\checkforce-style.css" />
+    <Content Include="Styles\materialicon.css" />
+    <Content Include="Styles\meteriallogin.css" />
+    <Content Include="Styles\style.css" />
+    <Content Include="Styles\styleadmin.css" />
+    <Content Include="Styles\template_css.css" />
+    <Content Include="Styles\theme.css" />
+    <Content Include="Styles\ticker.css" />
+    <Content Include="Styles\van.css" />
+    <Content Include="TechTeam\test.aspx" />
+    <Content Include="User_Controls\Footer.ascx" />
+    <Content Include="User_Controls\header.ascx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="webfonts\fa-brands-400.svg" />
+    <Content Include="webfonts\fa-regular-400.svg" />
+    <Content Include="webfonts\fa-solid-900.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CSSAdmin.Master.cs">
+      <DependentUpon>CSSAdmin.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CSSAdmin.Master.designer.cs">
+      <DependentUpon>CSSAdmin.Master</DependentUpon>
+    </Compile>
+    <Compile Include="frmCSSDashBoard.aspx.cs">
+      <DependentUpon>frmCSSDashBoard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmCSSDashBoard.aspx.designer.cs">
+      <DependentUpon>frmCSSDashBoard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmLabDashBoard.aspx.cs">
+      <DependentUpon>frmLabDashBoard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmLabDashBoard.aspx.designer.cs">
+      <DependentUpon>frmLabDashBoard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmDashBoard.aspx.cs">
+      <DependentUpon>frmDashBoard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmDashBoard.aspx.designer.cs">
+      <DependentUpon>frmDashBoard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmPotDashBoard.aspx.cs">
+      <DependentUpon>frmPotDashBoard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmPotDashBoard.aspx.designer.cs">
+      <DependentUpon>frmPotDashBoard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LabAdmin.Master.cs">
+      <DependentUpon>LabAdmin.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LabAdmin.Master.designer.cs">
+      <DependentUpon>LabAdmin.Master</DependentUpon>
+    </Compile>
+    <Compile Include="LabOnly\frmChangePassword.aspx.cs">
+      <DependentUpon>frmChangePassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LabOnly\frmChangePassword.aspx.designer.cs">
+      <DependentUpon>frmChangePassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LabOnly\index.aspx.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LabOnly\index.aspx.designer.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="POTAdmin.Master.cs">
+      <DependentUpon>POTAdmin.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="POTAdmin.Master.designer.cs">
+      <DependentUpon>POTAdmin.Master</DependentUpon>
+    </Compile>
+    <Compile Include="TechAdmin.Master.cs">
+      <DependentUpon>TechAdmin.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TechAdmin.Master.designer.cs">
+      <DependentUpon>TechAdmin.Master</DependentUpon>
+    </Compile>
+    <Compile Include="TechTeam\frmCategoryGroupMaster.aspx.cs">
+      <DependentUpon>frmCategoryGroupMaster.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TechTeam\frmCategoryGroupMaster.aspx.designer.cs">
+      <DependentUpon>frmCategoryGroupMaster.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TechTeam\frmChangePassword.aspx.cs">
+      <DependentUpon>frmChangePassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TechTeam\frmChangePassword.aspx.designer.cs">
+      <DependentUpon>frmChangePassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TechTeam\frmCokeDynamic.aspx.cs">
+      <DependentUpon>frmCokeDynamic.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TechTeam\frmCokeDynamic.aspx.designer.cs">
+      <DependentUpon>frmCokeDynamic.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TechTeam\frmCokeDynamicEdit.aspx.cs">
+      <DependentUpon>frmCokeDynamicEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TechTeam\frmCokeDynamicEdit.aspx.designer.cs">
+      <DependentUpon>frmCokeDynamicEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TechTeam\frmCokeDynamicResult.aspx.cs">
+      <DependentUpon>frmCokeDynamicResult.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TechTeam\frmCokeDynamicResult.aspx.designer.cs">
+      <DependentUpon>frmCokeDynamicResult.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TechTeam\frmCokeSuplier.aspx.cs">
+      <DependentUpon>frmCokeSuplier.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TechTeam\frmCokeSuplier.aspx.designer.cs">
+      <DependentUpon>frmCokeSuplier.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TechTeam\frmCokeSuplierEdit.aspx.cs">
+      <DependentUpon>frmCokeSuplierEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TechTeam\frmCokeSuplierEdit.aspx.designer.cs">
+      <DependentUpon>frmCokeSuplierEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TechTeam\frmCanteenType.aspx.cs">
+      <DependentUpon>frmCanteenType.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TechTeam\frmCanteenType.aspx.designer.cs">
+      <DependentUpon>frmCanteenType.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TechTeam\frmCanteenTypeEdit.aspx.cs">
+      <DependentUpon>frmCanteenTypeEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TechTeam\frmCanteenTypeEdit.aspx.designer.cs">
+      <DependentUpon>frmCanteenTypeEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TechTeam\frmItemCategoryMaster.aspx.cs">
+      <DependentUpon>frmItemCategoryMaster.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TechTeam\frmItemCategoryMaster.aspx.designer.cs">
+      <DependentUpon>frmItemCategoryMaster.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TechTeam\frmItemMaster.aspx.cs">
+      <DependentUpon>frmItemMaster.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TechTeam\frmItemMaster.aspx.designer.cs">
+      <DependentUpon>frmItemMaster.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TechTeam\frmUser.aspx.cs">
+      <DependentUpon>frmUser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TechTeam\frmUser.aspx.designer.cs">
+      <DependentUpon>frmUser.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TechTeam\frmUserEdit.aspx.cs">
+      <DependentUpon>frmUserEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TechTeam\frmUserEdit.aspx.designer.cs">
+      <DependentUpon>frmUserEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TechTeam\index.aspx.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TechTeam\index.aspx.designer.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TechTeam\test.aspx.cs">
+      <DependentUpon>test.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TechTeam\test.aspx.designer.cs">
+      <DependentUpon>test.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User_Controls\Footer.ascx.cs">
+      <DependentUpon>Footer.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User_Controls\Footer.ascx.designer.cs">
+      <DependentUpon>Footer.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="User_Controls\header.ascx.cs">
+      <DependentUpon>header.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User_Controls\header.ascx.designer.cs">
+      <DependentUpon>header.ascx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Images\fre3of9x.ttf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\free3of9.ttf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="fonts\gijgo-material.eot" />
+    <Content Include="fonts\gijgo-material.ttf" />
+    <Content Include="fonts\gijgo-material.woff" />
+    <Content Include="TechTeam\README.md" />
+    <Content Include="Styles\Login\fonts\font-awesome-4.7.0\fonts\fontawesome-webfont.eot" />
+    <Content Include="Styles\Login\fonts\font-awesome-4.7.0\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Styles\Login\fonts\font-awesome-4.7.0\fonts\fontawesome-webfont.woff" />
+    <Content Include="Styles\Login\fonts\font-awesome-4.7.0\fonts\fontawesome-webfont.woff2" />
+    <Content Include="Styles\Login\fonts\font-awesome-4.7.0\fonts\FontAwesome.otf" />
+    <Content Include="Styles\Login\fonts\font-awesome-4.7.0\less\animated.less" />
+    <Content Include="Styles\Login\fonts\font-awesome-4.7.0\less\bordered-pulled.less" />
+    <Content Include="Styles\Login\fonts\font-awesome-4.7.0\less\core.less" />
+    <Content Include="Styles\Login\fonts\font-awesome-4.7.0\less\fixed-width.less" />
+    <Content Include="Styles\Login\fonts\font-awesome-4.7.0\less\font-awesome.less" />
+    <Content Include="Styles\Login\fonts\font-awesome-4.7.0\less\icons.less" />
+    <Content Include="Styles\Login\fonts\font-awesome-4.7.0\less\larger.less" />
+    <Content Include="Styles\Login\fonts\font-awesome-4.7.0\less\list.less" />
+    <Content Include="Styles\Login\fonts\font-awesome-4.7.0\less\mixins.less" />
+    <Content Include="Styles\Login\fonts\font-awesome-4.7.0\less\path.less" />
+    <Content Include="Styles\Login\fonts\font-awesome-4.7.0\less\rotated-flipped.less" />
+    <Content Include="Styles\Login\fonts\font-awesome-4.7.0\less\screen-reader.less" />
+    <Content Include="Styles\Login\fonts\font-awesome-4.7.0\less\stacked.less" />
+    <Content Include="Styles\Login\fonts\font-awesome-4.7.0\less\variables.less" />
+    <Content Include="Styles\Login\fonts\font-awesome-4.7.0\scss\font-awesome.scss" />
+    <Content Include="Styles\Login\fonts\font-awesome-4.7.0\scss\_animated.scss" />
+    <Content Include="Styles\Login\fonts\font-awesome-4.7.0\scss\_bordered-pulled.scss" />
+    <Content Include="Styles\Login\fonts\font-awesome-4.7.0\scss\_core.scss" />
+    <Content Include="Styles\Login\fonts\font-awesome-4.7.0\scss\_fixed-width.scss" />
+    <Content Include="Styles\Login\fonts\font-awesome-4.7.0\scss\_icons.scss" />
+    <Content Include="Styles\Login\fonts\font-awesome-4.7.0\scss\_larger.scss" />
+    <Content Include="Styles\Login\fonts\font-awesome-4.7.0\scss\_list.scss" />
+    <Content Include="Styles\Login\fonts\font-awesome-4.7.0\scss\_mixins.scss" />
+    <Content Include="Styles\Login\fonts\font-awesome-4.7.0\scss\_path.scss" />
+    <Content Include="Styles\Login\fonts\font-awesome-4.7.0\scss\_rotated-flipped.scss" />
+    <Content Include="Styles\Login\fonts\font-awesome-4.7.0\scss\_screen-reader.scss" />
+    <Content Include="Styles\Login\fonts\font-awesome-4.7.0\scss\_stacked.scss" />
+    <Content Include="Styles\Login\fonts\font-awesome-4.7.0\scss\_variables.scss" />
+    <Content Include="Styles\Login\fonts\montserrat\Montserrat-Black.ttf" />
+    <Content Include="Styles\Login\fonts\montserrat\Montserrat-BlackItalic.ttf" />
+    <Content Include="Styles\Login\fonts\montserrat\Montserrat-Bold.ttf" />
+    <Content Include="Styles\Login\fonts\montserrat\Montserrat-BoldItalic.ttf" />
+    <Content Include="Styles\Login\fonts\montserrat\Montserrat-ExtraBold.ttf" />
+    <Content Include="Styles\Login\fonts\montserrat\Montserrat-ExtraBoldItalic.ttf" />
+    <Content Include="Styles\Login\fonts\montserrat\Montserrat-ExtraLight.ttf" />
+    <Content Include="Styles\Login\fonts\montserrat\Montserrat-ExtraLightItalic.ttf" />
+    <Content Include="Styles\Login\fonts\montserrat\Montserrat-Italic.ttf" />
+    <Content Include="Styles\Login\fonts\montserrat\Montserrat-Light.ttf" />
+    <Content Include="Styles\Login\fonts\montserrat\Montserrat-LightItalic.ttf" />
+    <Content Include="Styles\Login\fonts\montserrat\Montserrat-Medium.ttf" />
+    <Content Include="Styles\Login\fonts\montserrat\Montserrat-MediumItalic.ttf" />
+    <Content Include="Styles\Login\fonts\montserrat\Montserrat-Regular.ttf" />
+    <Content Include="Styles\Login\fonts\montserrat\Montserrat-SemiBold.ttf" />
+    <Content Include="Styles\Login\fonts\montserrat\Montserrat-SemiBoldItalic.ttf" />
+    <Content Include="Styles\Login\fonts\montserrat\Montserrat-Thin.ttf" />
+    <Content Include="Styles\Login\fonts\montserrat\Montserrat-ThinItalic.ttf" />
+    <Content Include="Styles\Login\fonts\poppins\Poppins-Black.ttf" />
+    <Content Include="Styles\Login\fonts\poppins\Poppins-BlackItalic.ttf" />
+    <Content Include="Styles\Login\fonts\poppins\Poppins-Bold.ttf" />
+    <Content Include="Styles\Login\fonts\poppins\Poppins-BoldItalic.ttf" />
+    <Content Include="Styles\Login\fonts\poppins\Poppins-ExtraBold.ttf" />
+    <Content Include="Styles\Login\fonts\poppins\Poppins-ExtraBoldItalic.ttf" />
+    <Content Include="Styles\Login\fonts\poppins\Poppins-ExtraLight.ttf" />
+    <Content Include="Styles\Login\fonts\poppins\Poppins-ExtraLightItalic.ttf" />
+    <Content Include="Styles\Login\fonts\poppins\Poppins-Italic.ttf" />
+    <Content Include="Styles\Login\fonts\poppins\Poppins-Light.ttf" />
+    <Content Include="Styles\Login\fonts\poppins\Poppins-LightItalic.ttf" />
+    <Content Include="Styles\Login\fonts\poppins\Poppins-Medium.ttf" />
+    <Content Include="Styles\Login\fonts\poppins\Poppins-MediumItalic.ttf" />
+    <Content Include="Styles\Login\fonts\poppins\Poppins-Regular.ttf" />
+    <Content Include="Styles\Login\fonts\poppins\Poppins-SemiBold.ttf" />
+    <Content Include="Styles\Login\fonts\poppins\Poppins-SemiBoldItalic.ttf" />
+    <Content Include="Styles\Login\fonts\poppins\Poppins-Thin.ttf" />
+    <Content Include="Styles\Login\fonts\poppins\Poppins-ThinItalic.ttf" />
+    <Content Include="Styles\Login\vendor\bootstrap\css\bootstrap-grid.css.map" />
+    <Content Include="Styles\Login\vendor\bootstrap\css\bootstrap-grid.min.css.map" />
+    <Content Include="Styles\Login\vendor\bootstrap\css\bootstrap-reboot.css.map" />
+    <Content Include="Styles\Login\vendor\bootstrap\css\bootstrap-reboot.min.css.map" />
+    <Content Include="Styles\Login\vendor\bootstrap\css\bootstrap.css.map" />
+    <Content Include="Styles\Login\vendor\bootstrap\css\bootstrap.min.css.map" />
+    <Content Include="packages.config" />
+    <Content Include="css\bootstrap.min.css.map" />
+    <Content Include="css\metisMenu.min.css.map" />
+    <Content Include="LabAdmin.Master" />
+    <Content Include="fonts\font-awesome-4.7.0\fonts\fontawesome-webfont.eot" />
+    <Content Include="fonts\font-awesome-4.7.0\fonts\fontawesome-webfont.ttf" />
+    <Content Include="fonts\font-awesome-4.7.0\fonts\fontawesome-webfont.woff" />
+    <Content Include="fonts\font-awesome-4.7.0\fonts\fontawesome-webfont.woff2" />
+    <Content Include="fonts\font-awesome-4.7.0\fonts\FontAwesome.otf" />
+    <Content Include="fonts\font-awesome-4.7.0\less\animated.less" />
+    <Content Include="fonts\font-awesome-4.7.0\less\bordered-pulled.less" />
+    <Content Include="fonts\font-awesome-4.7.0\less\core.less" />
+    <Content Include="fonts\font-awesome-4.7.0\less\fixed-width.less" />
+    <Content Include="fonts\font-awesome-4.7.0\less\font-awesome.less" />
+    <Content Include="fonts\font-awesome-4.7.0\less\icons.less" />
+    <Content Include="fonts\font-awesome-4.7.0\less\larger.less" />
+    <Content Include="fonts\font-awesome-4.7.0\less\list.less" />
+    <Content Include="fonts\font-awesome-4.7.0\less\mixins.less" />
+    <Content Include="fonts\font-awesome-4.7.0\less\path.less" />
+    <Content Include="fonts\font-awesome-4.7.0\less\rotated-flipped.less" />
+    <Content Include="fonts\font-awesome-4.7.0\less\screen-reader.less" />
+    <Content Include="fonts\font-awesome-4.7.0\less\stacked.less" />
+    <Content Include="fonts\font-awesome-4.7.0\less\variables.less" />
+    <Content Include="fonts\font-awesome-4.7.0\scss\font-awesome.scss" />
+    <Content Include="fonts\font-awesome-4.7.0\scss\_animated.scss" />
+    <Content Include="fonts\font-awesome-4.7.0\scss\_bordered-pulled.scss" />
+    <Content Include="fonts\font-awesome-4.7.0\scss\_core.scss" />
+    <Content Include="fonts\font-awesome-4.7.0\scss\_fixed-width.scss" />
+    <Content Include="fonts\font-awesome-4.7.0\scss\_icons.scss" />
+    <Content Include="fonts\font-awesome-4.7.0\scss\_larger.scss" />
+    <Content Include="fonts\font-awesome-4.7.0\scss\_list.scss" />
+    <Content Include="fonts\font-awesome-4.7.0\scss\_mixins.scss" />
+    <Content Include="fonts\font-awesome-4.7.0\scss\_path.scss" />
+    <Content Include="fonts\font-awesome-4.7.0\scss\_rotated-flipped.scss" />
+    <Content Include="fonts\font-awesome-4.7.0\scss\_screen-reader.scss" />
+    <Content Include="fonts\font-awesome-4.7.0\scss\_stacked.scss" />
+    <Content Include="fonts\font-awesome-4.7.0\scss\_variables.scss" />
+    <Content Include="fonts\educate-icon.ttf" />
+    <Content Include="fonts\educate-icon.woff" />
+    <Content Include="fonts\fontawesome-webfont.eot" />
+    <Content Include="fonts\fontawesome-webfont.ttf" />
+    <Content Include="fonts\fontawesome-webfont.woff" />
+    <Content Include="fonts\fontawesome-webfont.woff2" />
+    <Content Include="fonts\FontAwesome.otf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="TechAdmin.Master" />
+    <Content Include="POTAdmin.Master" />
+    <None Include="Properties\PublishProfiles\LabWork.pubxml" />
+    <None Include="Properties\PublishProfiles\LabWork1.pubxml" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <Content Include="webfonts\fa-brands-400.eot" />
+    <Content Include="webfonts\fa-brands-400.ttf" />
+    <Content Include="webfonts\fa-brands-400.woff" />
+    <Content Include="webfonts\fa-brands-400.woff2" />
+    <Content Include="webfonts\fa-brands-400d41d.eot" />
+    <Content Include="webfonts\fa-regular-400.eot" />
+    <Content Include="webfonts\fa-regular-400.ttf" />
+    <Content Include="webfonts\fa-regular-400.woff" />
+    <Content Include="webfonts\fa-regular-400.woff2" />
+    <Content Include="webfonts\fa-regular-400d41d.eot" />
+    <Content Include="webfonts\fa-solid-900.eot" />
+    <Content Include="webfonts\fa-solid-900.ttf" />
+    <Content Include="webfonts\fa-solid-900.woff" />
+    <Content Include="webfonts\fa-solid-900.woff2" />
+    <Content Include="webfonts\fa-solid-900d41d.eot" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Business Layer\BusinessLayer.csproj">
+      <Project>{7568c780-9235-483c-9b6d-0384804537c6}</Project>
+      <Name>BusinessLayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DropDownCheckBoxes\DropDownCheckBoxes.csproj">
+      <Project>{dc5fd4c5-70c8-4ec1-a9ea-b0a3fb7ae1d3}</Project>
+      <Name>DropDownCheckBoxes</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Model Layer\ModelLayer.csproj">
+      <Project>{9e039be2-f145-4326-bf03-5b9ce10ed5db}</Project>
+      <Name>ModelLayer</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>61780</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:61780/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

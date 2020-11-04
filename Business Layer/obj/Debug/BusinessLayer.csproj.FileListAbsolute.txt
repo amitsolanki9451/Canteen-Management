@@ -1,0 +1,9 @@
+D:\Amit PC Backup\DT Project\CMS\Project\CMS\Business Layer\bin\Debug\BusinessLayer.dll
+D:\Amit PC Backup\DT Project\CMS\Project\CMS\Business Layer\bin\Debug\BusinessLayer.pdb
+D:\Amit PC Backup\DT Project\CMS\Project\CMS\Business Layer\bin\Debug\DataAccessLayer.dll
+D:\Amit PC Backup\DT Project\CMS\Project\CMS\Business Layer\bin\Debug\ModelLayer.dll
+D:\Amit PC Backup\DT Project\CMS\Project\CMS\Business Layer\bin\Debug\DataAccessLayer.pdb
+D:\Amit PC Backup\DT Project\CMS\Project\CMS\Business Layer\bin\Debug\ModelLayer.pdb
+D:\Amit PC Backup\DT Project\CMS\Project\CMS\Business Layer\obj\Debug\BusinessLayer.csprojResolveAssemblyReference.cache
+D:\Amit PC Backup\DT Project\CMS\Project\CMS\Business Layer\obj\Debug\BusinessLayer.dll
+D:\Amit PC Backup\DT Project\CMS\Project\CMS\Business Layer\obj\Debug\BusinessLayer.pdb
